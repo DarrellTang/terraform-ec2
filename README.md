@@ -35,3 +35,4 @@ upload_filename = ""
 * Accordingly, the public key uploaded to this instance is hardcoded to `~/.ssh/id_rsa.pub`.
 * The `.gitignore` file ignores the `terraform.tfvars` file so that, if specified, credentials are not committed to source countrol.
 * The security groups applied to this instance allow connections via ssh from _any_ ip addresses. Apply with caution. 
+* At this time, the file to upload must come from within the working directory (i.e. `./filename`) and be specified as `filename` or `test.file` without the `./`
