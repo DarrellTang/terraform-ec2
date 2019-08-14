@@ -8,3 +8,6 @@ tf.out
 
 # Sensitive Files
 terraform.tfvars
+
+# Testing
+test.file
