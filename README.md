@@ -1,5 +1,5 @@
 # terraform-ec2
-This Terraform code will create a single AWS ec2 instance in the specified region and upload the specified file to the /tmp folder of the new instance. 
+This Terraform code will create a single AWS ec2 instance in the specified region and upload the specified file to the `/tmp` folder of the new instance. 
 
 ## Requisite Information
 * [AWS Region Name](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)
@@ -7,7 +7,7 @@ This Terraform code will create a single AWS ec2 instance in the specified regio
 * AWS Credentials (Access Key & Secret Key)
 * Filename to upload
 
-By default, Terraform will prompt for this information but you can specify it beforehand by creating a file named `terraform.tfvars` in the same directory with the below format:
+By default, Terraform will prompt for this information but you can specify it beforehand by creating a file named `terraform.tfvars` in the same directory with the below format and filling in the values:
 
 ```
 aws_region = ""
@@ -15,14 +15,15 @@ instance_type = ""
 instance_name = ""
 aws_access_key = ""
 aws_secret_key = ""
+upload_filename = ""
 ```
 
 ## Usage
 * Install Terraform
-..* Instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) to install Terraform
+  * Instructions can be found [here](https://learn.hashicorp.com/terraform/getting-started/install.html) to install Terraform
 * Clone this repository
 * Navigate to directory for this cloned repository
 * `terraform init`
 * `terraform plan -out tf.out`
-..* Enter any variables you didn't specify in the `terraform.tfvars` file
+  * Enter any variables you didn't specify in the `terraform.tfvars` file
 * `terraform apply tf.out`
