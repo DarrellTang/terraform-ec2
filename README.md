@@ -33,6 +33,6 @@ upload_filename = ""
 * As such, the default user to copy the file over is `centos` per the AMI's documentation.
 * The ssh connection to copy the file also assumes the private ssh key to connect to this instance is at `~/.ssh/id_rsa`.
 * Accordingly, the public key uploaded to this instance is hardcoded to `~/.ssh/id_rsa.pub`.
-* The `.gitignore` file ignores the `terraform.tfvars` file so that, if specified, credentials are not committed to source countrol.
+* The `.gitignore` file ignores the `terraform.tfvars` file so that, if specified, credentials are not committed to source control.
 * The security groups applied to this instance allow connections via ssh from _any_ ip addresses. Apply with caution. 
 * At this time, the file to upload must come from within the working directory (i.e. `./filename`) and be specified as `filename` or `test.file` without the `./`
