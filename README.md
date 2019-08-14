@@ -27,3 +27,11 @@ upload_filename = ""
 * `terraform plan -out tf.out`
   * Enter any variables you didn't specify in the `terraform.tfvars` file
 * `terraform apply tf.out`
+
+## Assumptions & Caveats
+* This code uses the [official CentOS AMI](https://aws.amazon.com/marketplace/pp/B00O7WM7QW) with a hardcoded AMI ID.
+* As such, the default user to copy the file over is `centos` per the AMI's documentation.
+* The ssh connection to copy the file also assumes the private ssh key to connect to this instance is at `~/.ssh/id_rsa`.
+* Accordingly, the public key uploaded to this instance is hardcoded to `~/.ssh/id_rsa.pub`.
+* The `.gitignore` file ignores the `terraform.tfvars` file so that, if specified, credentials are not committed to source countrol.
+* The security groups applied to this instance allow connections via ssh from _any_ ip addresses. Apply with caution. 
